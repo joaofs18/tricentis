@@ -16,7 +16,9 @@ public class Drivers {
 			System.setProperty("webdriver.chrome.driver", projectPath + "/src/test/resources/drivers/chromedriver.exe");
 			inicializado = true;
 			driver = new ChromeDriver();
+			driver.manage().window().maximize();
 			driver.get("http://sampleapp.tricentis.com/101/app.php");
+			
 		}
 	}
 
