@@ -9,11 +9,11 @@ import pages.PreencherFormulario;
 public class PreencherFormularioSteps {
 
 	public Drivers driver = new Drivers();
-	public PreencherFormulario preencherformulario = new PreencherFormulario(driver.getDriver());
+	public PreencherFormulario preencherformulario = new PreencherFormulario(Drivers.getDriver());
 
 	@Dado("que o usuario acessou a pagina tricentis")
 	public void que_o_usuario_acessou_a_pagina_tricentis() {
-		new PreencherFormulario(driver.getDriver());
+		new PreencherFormulario(Drivers.getDriver());
 
 	}
 

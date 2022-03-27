@@ -6,15 +6,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.cucumber.java.Before;
 
 public class Drivers {
-	private static boolean initialized = false;
+	private static boolean inicializado = false;
 	private static WebDriver driver;
 
 	@Before
-	public void initialize() {
-		if (!initialized) {
+	public void inicializarDriver() {
+		if (!inicializado) {
 			String projectPath = System.getProperty("user.dir");
 			System.setProperty("webdriver.chrome.driver", projectPath + "/src/test/resources/drivers/chromedriver.exe");
-			initialized = true;
+			inicializado = true;
 			driver = new ChromeDriver();
 			driver.get("http://sampleapp.tricentis.com/101/app.php");
 		}

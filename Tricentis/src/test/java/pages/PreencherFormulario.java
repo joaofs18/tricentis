@@ -71,7 +71,7 @@ public class PreencherFormulario {
 	@FindBy(id = "birthdate")
 	WebElement date_birthdate;
 
-	@FindBy(xpath = "//body/div[@id='site-content']/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/section[2]/div[4]/p[1]/label[1]")
+	@FindBy(xpath = ".//*[@id='insurance-form']/div/section[2]/div[4]/p/label[1]")
 	WebElement radio_gender;
 
 	@FindBy(id = "streetaddress")
@@ -115,7 +115,7 @@ public class PreencherFormulario {
 	@FindBy(id = "damageinsurance")
 	WebElement cmbox_damageinsurance;
 
-	@FindBy(xpath = "//body/div[@id='site-content']/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/section[3]/div[5]/p[1]/label[1]/span[1]")
+	@FindBy(xpath = ".//*[@id='insurance-form']/div/section[3]/div[5]/p/label[1]")
 	WebElement chckbox_optinionalproducts;
 
 	@FindBy(id = "courtesycar")
@@ -129,7 +129,7 @@ public class PreencherFormulario {
 	// Fim Mapeamento Aba Product
 
 	// Mapeamento Aba Price
-	@FindBy(xpath = "//body/div[@id='site-content']/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/section[4]/section[1]/div[1]/table[1]/tfoot[1]/tr[1]/th[2]/label[4]/span[1]")
+	@FindBy(xpath = ".//*[@id='priceTable']/tfoot/tr/th[2]/label[4]")
 	WebElement radio_selectultimate;
 
 	@FindBy(id = "nextsendquote")
