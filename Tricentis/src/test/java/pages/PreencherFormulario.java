@@ -71,7 +71,7 @@ public class PreencherFormulario {
 	@FindBy(id = "birthdate")
 	WebElement date_birthdate;
 
-	@FindBy(xpath = "//input[@id='gendermale']")
+	@FindBy(xpath = "//body/div[@id='site-content']/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/section[2]/div[4]/p[1]/label[1]")
 	WebElement radio_gender;
 
 	@FindBy(id = "streetaddress")
@@ -115,7 +115,7 @@ public class PreencherFormulario {
 	@FindBy(id = "damageinsurance")
 	WebElement cmbox_damageinsurance;
 
-	@FindBy(xpath = "//input[@id='EuroProtection']")
+	@FindBy(xpath = "//body/div[@id='site-content']/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/section[3]/div[5]/p[1]/label[1]/span[1]")
 	WebElement chckbox_optinionalproducts;
 
 	@FindBy(id = "courtesycar")
@@ -129,7 +129,7 @@ public class PreencherFormulario {
 	// Fim Mapeamento Aba Product
 
 	// Mapeamento Aba Price
-	@FindBy(id = "selectultimate")
+	@FindBy(xpath = "//body/div[@id='site-content']/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/section[4]/section[1]/div[1]/table[1]/tfoot[1]/tr[1]/th[2]/label[4]/span[1]")
 	WebElement radio_selectultimate;
 
 	@FindBy(id = "nextsendquote")
@@ -237,7 +237,7 @@ public class PreencherFormulario {
 	}
 
 	public void validaAbaInsuratData() {
-		btn_open.isDisplayed();
+		//btn_open.isDisplayed();
 
 	}
 	// Fim Métodos Aba Vehicle
@@ -256,7 +256,7 @@ public class PreencherFormulario {
 	}
 
 	public void radioGender() {
-		radio_gender.clear();
+		radio_gender.click();
 	}
 
 	public void txtStreetAddress() {
@@ -296,12 +296,12 @@ public class PreencherFormulario {
 
 	// Métodos Aba Product
 	public void dateStartDate() {
-		date_startdate.sendKeys("05/18/1990");
+		date_startdate.sendKeys("05/05/2023");
 	}
 
 	public void selectItemInsuranceSum() {
 		Select select = new Select(cmbox_insurancesum);
-		select.selectByVisibleText("3000000");
+		select.selectByVisibleText("3.000.000,00");
 	}
 
 	public void selectItemMeritRating() {
@@ -320,7 +320,7 @@ public class PreencherFormulario {
 
 	public void cmboxCourtesyCar() {
 		Select select = new Select(cmbox_courtesycar);
-		select.selectByVisibleText("3000000");
+		select.selectByVisibleText("No");
 	}
 
 	public void btnNextSelectPriceOption() {
