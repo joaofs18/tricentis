@@ -1,7 +1,5 @@
 package StepDefinitions;
 
-
-
 import io.cucumber.java.an.E;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.it.Quando;
@@ -10,19 +8,17 @@ import pages.PreencherFormulario;
 
 public class PreencherFormularioSteps {
 
-	
 	public Drivers driver = new Drivers();
 	public PreencherFormulario preencherformulario = new PreencherFormulario(driver.getDriver());
 
 	@Dado("que o usuario acessou a pagina tricentis")
 	public void que_o_usuario_acessou_a_pagina_tricentis() {
-		
-		
+		new PreencherFormulario(driver.getDriver());
+
 	}
 
 	@E("preenche todos os campos obrigatorios da aba vehicle")
 	public void preenche_todos_os_campos_obrigatorios_da_aba_vehicle() {
-		
 
 		preencherformulario.selectItemMake();
 		preencherformulario.selectItemModel();
@@ -57,7 +53,6 @@ public class PreencherFormularioSteps {
 
 	@E("preenche todos os campos obrigatorios da aba insurant")
 	public void preenche_todos_os_campos_obrigatorios_da_aba_insurant() {
-		
 
 		preencherformulario.txtFirstname();
 		preencherformulario.txtLastname();
@@ -88,7 +83,7 @@ public class PreencherFormularioSteps {
 
 	@E("preenche todos os campos obrigatorios da aba product")
 	public void preenche_todos_os_campos_obrigatorios_da_aba_product() {
-		
+
 		preencherformulario.dateStartDate();
 		preencherformulario.selectItemInsuranceSum();
 		preencherformulario.selectItemMeritRating();
@@ -109,7 +104,7 @@ public class PreencherFormularioSteps {
 
 	@Dado("que o usuario esta na aba aba select price data")
 	public void que_o_usuario_esta_na_aba_aba_select_price_data() {
-		
+
 		preencherformulario.validaAbaPriceOption();
 	}
 
@@ -136,7 +131,7 @@ public class PreencherFormularioSteps {
 
 	@E("preenche todos os campos obrigatorios da aba send")
 	public void preenche_todos_os_campos_obrigatorios_da_aba_send() {
-		
+
 		preencherformulario.txtEmail();
 		preencherformulario.txtPhone();
 		preencherformulario.txtUsername();
@@ -152,6 +147,7 @@ public class PreencherFormularioSteps {
 	@Entao("uma mensagem de sucesso e exibida")
 	public void uma_mensagem_de_sucesso_e_exibida() {
 		preencherformulario.validaSendQuote();
+		preencherformulario.fecharNavegador();
 
 	}
 

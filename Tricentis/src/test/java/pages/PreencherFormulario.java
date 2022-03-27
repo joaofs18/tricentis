@@ -237,7 +237,7 @@ public class PreencherFormulario {
 	}
 
 	public void validaAbaInsuratData() {
-		//btn_open.isDisplayed();
+		// btn_open.isDisplayed();
 
 	}
 	// Fim Métodos Aba Vehicle
@@ -377,6 +377,10 @@ public class PreencherFormulario {
 	public void validaSendQuote() {
 		lbl_msgsucess.isDisplayed();
 
+	}
+
+	public void fecharNavegador() {
+		driver.quit();
 	}
 	// Fim Métodos Aba Send
 
